@@ -1,5 +1,5 @@
 {
-  "name": "@happy-nx/source",
+  "name": "@personal-dev-temp/source",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -31,15 +31,18 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
+    "react-router-dom": "^6.18.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "styled-components": "6.1.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.8.1",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.2.7",
     "@nx/cypress": "17.0.3",
+    "@nx/eslint": "17.0.3",
     "@nx/eslint-plugin": "17.0.3",
     "@nx/jest": "17.0.3",
     "@nx/js": "17.0.3",
@@ -86,7 +89,6 @@
     "ts-node": "10.9.1",
     "typescript": "~5.2.2",
     "vite": "~4.5.0",
-    "vitest": "~0.34.6",
-    "@nx/eslint": "17.0.3"
+    "vitest": "~0.34.6"
   }
 }

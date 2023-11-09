@@ -1,10 +1,13 @@
-import NxWelcome from './nx-welcome';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HomePage } from './pages/home/home';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="frontend" />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
