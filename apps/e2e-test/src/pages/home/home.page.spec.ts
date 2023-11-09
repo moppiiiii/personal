@@ -10,7 +10,17 @@ test('Run HomePage E2E Test', async ({ page }) => {
 
   await test.step('Test accessibility', async () => {
     const accessibilityScanResults = await new AxeBuilder({ page })
-      .withTags(['wcag2a', 'wcag2aa', 'wcag2aaa', 'wcag21a', 'wcag21aa', 'wcag21aaa'])
+      .withTags([
+        'wcag2a',
+        'wcag2aa',
+        'wcag2aaa',
+        'wcag21a',
+        'wcag21aa',
+        'wcag21aaa',
+        'wcag22a',
+        'wcag22aa',
+        'wcag22aaa'
+      ])
       .analyze();
     expect(accessibilityScanResults.violations).toEqual([]);
   });
