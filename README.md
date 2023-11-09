@@ -1,19 +1,13 @@
-# Local environment construction
-## Clone repository to any directory
-```
-cd work
-git clone git@github.com:moppiiiii/Happy_Nx.git
-```
+# README
 
-## Installing dependencies
-```
-npm ci
-```
+## Environment Docs
 
-## App launch
-```
-npm run start
-```
+### Local Environment Construction
 
-## Access the app
-http://localhost:4200/
+[local-environment-construction](./docs/environment-docs/local-environment-construction.md)
+
+## Test Docs
+
+### Accessibility Test
+
+[accessibility-test](./docs/test-docs/accessibility-test.md)
