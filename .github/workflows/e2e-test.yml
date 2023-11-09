@@ -1,0 +1,32 @@
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  playwright-test:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.36.0-focal
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Setup Playwright
+        run: npx playwright install --with-deps
+
+      - name: Update Screenshots
+        run: HOME=/root npm run test:e2e:update
+
+      - name: Run Playwright Tests
+        run: HOME=/root npm run test:e2e
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: dist/.playwright/apps/e2e-test/playwright-report/
+          retention-days: 7
