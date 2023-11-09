@@ -5,25 +5,35 @@
   "targets": {
     "e2e": {
       "executor": "@nx/playwright:playwright",
-      "outputs": ["{workspaceRoot}/dist/.playwright/apps/e2e-test"],
+      "outputs": [
+        "{workspaceRoot}/dist/.playwright/apps/e2e-test"
+      ],
       "options": {
         "config": "apps/e2e-test/playwright.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/e2e-test/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "apps/e2e-test/**/*.{js,ts}"
+        ]
       }
     },
     "update-screenshot": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["playwright test --update-snapshots"],
+        "commands": [
+          "playwright test --update-snapshots"
+        ],
         "cwd": "apps/e2e-test"
       }
     }
   },
-  "implicitDependencies": ["frontend"]
+  "implicitDependencies": [
+    "frontend"
+  ]
 }
