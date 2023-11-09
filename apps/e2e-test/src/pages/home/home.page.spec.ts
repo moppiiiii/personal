@@ -9,7 +9,9 @@ test('Run HomePage E2E Test', async ({ page }) => {
   });
 
   await test.step('Test accessibility', async () => {
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag2aaa', 'wcag21a', 'wcag21aa', 'wcag21aaa'])
+      .analyze();
     expect(accessibilityScanResults.violations).toEqual([]);
   });
 });
