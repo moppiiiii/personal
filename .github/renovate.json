@@ -1,14 +1,16 @@
 {
   "extends": [
-    "config:recommended"
+    "config:recommended",
+		"group:allNonMajor",
+		"schedule:earlyMondays",
+		"schedule:automergeEarlyMondays",
+		":prConcurrentLimitNone",
+		":prHourlyLimitNone",
+    ":timezone(Asia/Tokyo)"
   ],
   "dependencyDashboard": false,
-  "schedule": [
-    "after 8am on monday", "before 10am on monday"
-  ],
-  "automergeSchedule": [
-    "after 8am on monday", "before 10am on monday"
-  ],
+  "labels": ["renovate"],
+  "enabledManagers": ["npm"],
   "major": {
     "enabled": false
   },
