@@ -3,7 +3,6 @@
     "config:recommended"
   ],
   "dependencyDashboard": false,
-  "requiredStatusChecks": null,
   "schedule": [
     "after 8am on monday", "before 10am on monday"
   ],
