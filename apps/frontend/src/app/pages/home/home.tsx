@@ -1,9 +1,7 @@
 import React from 'react';
 
+import { HomeTemplate } from '../../parts/templates/home/home.template';
+
 export const HomePage: React.FC = () => {
-  return (
-    <main role="main">
-      <h1 className="text-black">home page</h1>
-    </main>
-  );
+  return <HomeTemplate />;
 };
