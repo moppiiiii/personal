@@ -42,6 +42,7 @@
     "@axe-core/playwright": "^4.8.1",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.2.7",
+    "@nrwl/nx-cloud": "^16.0.4",
     "@nx/cypress": "17.0.3",
     "@nx/eslint": "17.0.3",
     "@nx/eslint-plugin": "17.0.3",
