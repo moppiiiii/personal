@@ -5,7 +5,7 @@ test('Run HomePage E2E Test', async ({ page }) => {
   await test.step('Test if the page title is displayed', async () => {
     await page.goto('/');
     const pageTitleLocator = page.locator('//*[@id="root"]/main/h1');
-    await expect(pageTitleLocator).toHaveText('home page');
+    await expect(pageTitleLocator).toHaveText('Home Page');
   });
 
   await test.step('Test accessibility', async () => {
