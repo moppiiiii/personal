@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run-many --target serve --all --parallel",
-    "start:sb": "nx run frontend:storybook",
+    "sb": "nx run frontend:storybook",
     "build": "nx run-many --target build --all --parallel",
     "test:e2e": "nx e2e e2e-test",
     "test:e2e:update": "nx update-screenshot e2e-test",
