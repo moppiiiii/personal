@@ -1,0 +1,27 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    group:
+      nx-dependencies:
+        patterns:
+          - ["@nx*", "@nrwl*"]
+      react-dependencies:
+        patterns:
+          - "react*"
+      nestjs-dependencies:
+        patterns:
+          - "@nestjs*"
+      apollo-dependencies:
+        patterns:
+          - "@apollo*"
+      graphql-dependencies:
+        patterns:
+          - "@graphql"
+      types-dependencies:
+        patterns:
+          - "@types*"
+      test-dependencies:
+        patterns: ["*playwright*", "*jest*"]
