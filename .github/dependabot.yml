@@ -24,4 +24,5 @@ updates:
         patterns:
           - "@types*"
       test-dependencies:
-        patterns: ["*playwright*", "*jest*"]
+        patterns:
+          - ["*playwright*", "*jest*"]
