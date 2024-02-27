@@ -1,35 +1,59 @@
 version: 2
 updates:
+  # NX と Nrwl 依存関係の更新
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
-    grouping:
-      nx-dependencies:
-        group:
-          name: "nx-dependencies"
-          patterns: ["@nx/*", "@nrwl/*"]
-      react-dependencies:
-        group:
-          name: "react-dependencies"
-          patterns: ["react*"]
-      nestjs-dependencies:
-        group:
-          name: "nestjs-dependencies"
-          patterns: ["@nestjs*"]
-      apollo-dependencies:
-        group:
-          name: "apollo-dependencies"
-          patterns: ["@apollo*"]
-      graphql-dependencies:
-        group:
-          name: "graphql-dependencies"
-          patterns: ["@graphql*"]
-      types-dependencies:
-        group:
-          name: "types-dependencies"
-          patterns: ["@types*"]
-      test-dependencies:
-        group:
-          name: "test-dependencies"
-          patterns: ["*playwright*", "*jest*"]
+    allow:
+      - dependency-name: "@nx/*"
+      - dependency-name: "@nrwl/*"
+
+  # React 依存関係の更新
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: "react*"
+
+  # NestJS 依存関係の更新
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: "@nestjs*"
+
+  # Apollo 依存関係の更新
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: "@apollo*"
+
+  # GraphQL 依存関係の更新
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: "@graphql*"
+
+  # TypeScript 型定義の更新
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: "@types*"
+
+  # テスト関連依存関係の更新
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: "*playwright*"
+      - dependency-name: "*jest*"
